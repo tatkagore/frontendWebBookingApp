@@ -7,7 +7,7 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   const token =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRAdC50IiwiaWQiOjE3LCJpYXQiOjE3MTA0MjU4NDQsImV4cCI6MTcxMDQyOTQ0NH0.QzQ1Lk4mTukYLqnhQBMlMJzEmEwq-ESMENIJsDw7TPA";
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRAdC50IiwiaWQiOjE3LCJpYXQiOjE3MTA0Mjk1MDYsImV4cCI6MTcxMDQzMzEwNn0.Xo33ZSDO-G96N73XZL1Jrf9Stllo--bYFsDC5Nb4hvc";
 
   useEffect(() => {
     Promise.all([
@@ -36,16 +36,18 @@ function App() {
 
   return (
     <>
-      <p className="paragrah">Front Booking App</p>
+      <h1>Simplon Frontend</h1>
+      <p className="paragraph">Front Booking App</p>
       {loading ? (
         <p>Loading...</p>
       ) : (
         <ul className="reservationController">
           {reservations.map((reservation, index) => (
             <li className="reservation" key={index}>
+              <p>Name : {getUserFullName(reservation.userId)}</p>
               <p>Number of clients : {reservation.numberOfGuests}</p>
               <p>Note : {reservation.note}</p>
-              <p>Name : {getUserFullName(reservation.userId)}</p>
+              
             </li>
           ))}
         </ul>

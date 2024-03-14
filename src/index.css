@@ -66,3 +66,29 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.reservationContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.reservation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #222;
+  padding: 25px;
+  margin: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: lightgray;
+}
+.paragraph {
+  margin: 1em 0;
+  font-size: 2.5em;
+  color: magenta;
+}
